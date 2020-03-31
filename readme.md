@@ -18,9 +18,9 @@
 ### var (Old School Javascript)
 Permasalahan yang ada pada `var`
 1. Reassign itu diperbolehkan di mana saja.
-2. Variabel seolah *diangkat* ke atas kapan pun
-3. Scope bermasalah
-4. Lupa declare variable itu *dimaafkan*
+1. Variabel seolah *diangkat* ke atas kapan pun
+1. Scope bermasalah
+1. Lupa declare variable itu *dimaafkan*
 
 Code:
 
@@ -129,15 +129,17 @@ Array juga bisa di-`array`kan lagi
 Analogi:
 Pesen biskuit dalam kardus
 
-1 bungkus biskut ada 5 pcs biskuit
+1 bungkus biskut ada 5 pcs biskuit  
 [ b0, b1, b2, b3, b4 ]
 
-1 kardus isi 3 bungkus biskuit
-[
-  [ b0, b1, b2, b3, b4 ] <-- bungkus pertama
-  [ b0, b1, b2, b3, b4 ] <-- bungkus kedua
-  [ b0, b1, b2, b3, b4 ] <-- bungkus ketiga
+1 kardus isi 3 bungkus biskuit  
+<pre>
+[  
+  [ b0, b1, b2, b3, b4 ] <-- bungkus pertama  
+  [ b0, b1, b2, b3, b4 ] <-- bungkus kedua  
+  [ b0, b1, b2, b3, b4 ] <-- bungkus ketiga  
 ]
+</pre>
 
 Representasi dalam bentuk kode?
 Code:
@@ -153,11 +155,12 @@ kardus.push(biskuit);
 ### Object
 Merupakan kumpulan data yang umumnya menyatakan sesuatu 
 
-Contoh : object Student, punya informasi tertentu seperti nama, alamat, identitas, dkk
+Contoh :  
+object Student, punya informasi tertentu seperti nama, alamat, identitas, dkk
 
-Representasikan dalam bentuk object
+Apabila kita akan merepresentasikan dalam bentuk object, jadinya adalah seperti berikut.
+
 Code:
-
 ```javascript
 // Inisialisasi object
 let objStudent = {};
@@ -211,7 +214,7 @@ let tambahStudent = (nama, alamat, identitas) => {
 tambahStudent('test', '123', 'abc');
 ```
 
-Kalau misalnya ternyata data student ada 10, kita akan memasukkan 10 parameter?
+Kalau misalnya ternyata data student ada 10, kita akan memasukkan 10 parameter?  
 Adakah solusi lainnya?
 
 Salah satu solusinya: jadikan object ~
@@ -272,9 +275,9 @@ let fungsiPenjumlahan = (param1, param2) => param1 + param2;
 ```
 
 ## process.argv
-Selama ini kan kita menggunakan file .js secara langsung kita panggil misal `node index.js`
-tapi bagaimana yah caranya kita ingin menangkap suatu nilai yang dilempar pada saat kita
-memanggil node tersebut? misalnya `node index.js "Cetak aku mas"`
+Selama ini kan kita menggunakan file .js secara langsung kita panggil misal `node index.js`  
+tapi bagaimana yah caranya kita ingin menangkap suatu nilai yang dilempar pada saat kita  
+memanggil node tersebut? misalnya `node index.js "Cetak aku mas"`  
 
 Solusinya? gunakan built-in `process.argv` dari nodejs
 
@@ -288,6 +291,47 @@ let argv = process.argv;
 // array2..n ==> Data / Value yang kita lemparkan
 console.log(argv);
 console.log(argv[2]);
+```
+
+Bagaimana bila kita menginginkan 2 parameter input dari process.argv?  
+Misal:  
+Inginkan mencetak `.` dengan baris `x` dan kolom `y` dipisah dengan `|`
+
+Contoh input:
+```javascript
+node index.js 5 15
+```
+
+Contoh output
+```javascript
+|.|.|.|.|.|.|.|.|.|.|.|.|.|.|.|
+|.|.|.|.|.|.|.|.|.|.|.|.|.|.|.|
+|.|.|.|.|.|.|.|.|.|.|.|.|.|.|.|
+|.|.|.|.|.|.|.|.|.|.|.|.|.|.|.|
+|.|.|.|.|.|.|.|.|.|.|.|.|.|.|.|
+```
+
+Code:
+```javascript
+let argv = process.argv;
+let param1 = argv[2];
+let param2 = argv[3];
+
+let arr = [];
+
+for(let i = 0; i < param1; i++) {
+  let output;
+  
+  arr[i] = [];
+
+  for(let j = 0; j < param2; j++) {
+    arr[i][j] = '.';
+  }
+
+  output = '|' + arr[i].join('|') + '|';
+  
+  console.log(output);
+}
 ```
 
 ## Referensi
