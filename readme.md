@@ -2,6 +2,7 @@
 1. [var, const, dan let](#var-const-dan-let)
     * [var (Old School Javascript)](#var-old-school-javascript)
     * [const and let (ES6)](#const-and-let-es6)
+    * [use strict](#use-strict)
 1. [Data Structures](#data-structures)
     * [Array](#array)
     * [Nested Array](#nested-array)
@@ -59,7 +60,6 @@ console.log(variableKeempat);
 ```
 
 ### const and let (ES6)
-
 Please welcome `const` dan `let` untuk menyelesaikan masalah di atas
 
 Solusi 1
@@ -99,6 +99,30 @@ function fungsiEmpat () {
 console.log(variableKeempat);
 ```
 
+### use strict
+Sebuah kata kunci yang digunakan untuk membuat hidup koding dalam javascript menjadi lebih `susah`  
+namun menjadi lebih `aman` seperti:
+1. Variable wajib declare (termasuk object)
+1. Beberapa kata kunci tidak boleh digunakan menjadi variable
+1. Tidak boleh ada nama variable yang sama dalam object / function parameter
+
+Contoh:
+```javascript
+"use strict"
+
+// Dosa 1
+pi = 3.14
+console.log(pi)
+
+// Dosa 2
+var undefined = 5;
+
+// Dosa 3
+function fungsiJejadian(param1, param1) { 
+  // logic program di sini
+}
+```
+
 ## Data Structures
 
 ### Array
@@ -124,22 +148,26 @@ for(let ctr = 0; ctr < arrayPenampung.length; ctr++) {
 ```
 
 ### Nested Array
-Array juga bisa di-`array`kan lagi
+Array juga bisa di-`array`-kan lagi
 
 Analogi:
 Pesen biskuit dalam kardus
 
 1 bungkus biskut ada 5 pcs biskuit  
-[ b0, b1, b2, b3, b4 ]
+```javascript
+[ b0 | b1 | b2 | b3 | b4 ]
+```
 
 1 kardus isi 3 bungkus biskuit  
-<pre>
-[  
-  [ b0, b1, b2, b3, b4 ] <-- bungkus pertama  
-  [ b0, b1, b2, b3, b4 ] <-- bungkus kedua  
-  [ b0, b1, b2, b3, b4 ] <-- bungkus ketiga  
-]
-</pre>
+
+```javascript
+------------------------------
+| [ b0 | b1 | b2 | b3 | b4 ] |  <-- bungkus pertama  
+| [ b0 | b1 | b2 | b3 | b4 ] |  <-- bungkus kedua  
+| [ b0 | b1 | b2 | b3 | b4 ] |  <-- bungkus ketiga  
+------------------------------
+^ dibungkus dalam kardus
+```
 
 Representasi dalam bentuk kode?
 Code:
@@ -338,3 +366,5 @@ for(let i = 0; i < param1; i++) {
 * [Sastra Panca Nababan - Medium](https://medium.com/coderupa/es6-var-let-const-apa-bedanya-1cd4daaee9f0)
 * [Javascript Array Objects - TutorialsPoint](https://www.tutorialspoint.com/javascript/javascript_arrays_object.htm)
 * [process.Argv - NodeJS](https://nodejs.org/docs/latest/api/process.html#process_process_argv)
+* [W3Schools - Use Strict](https://www.w3schools.com/js/js_strict.asp)
+* [MDN - Strict Mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
