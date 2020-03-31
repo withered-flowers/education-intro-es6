@@ -18,7 +18,7 @@
 
 ### var (Old School Javascript)
 Permasalahan yang ada pada `var`
-1. Reassign itu diperbolehkan di mana saja.
+1. Re-declare variable diperbolehkan di mana saja.
 1. Variable seolah *diangkat* ke atas kapan pun (*hoisting*)
 1. Scope bermasalah
 1. Lupa declare variable itu *dimaafkan*
@@ -55,9 +55,9 @@ console.log(variableKetiga);
 
 Permasalahan 4
 ```javascript
-function fungsiEmpat () {
+(function fungsiEmpat () {
   variableKeempat = 3;
-}
+})();
 
 console.log(variableKeempat);
 ```
@@ -95,9 +95,9 @@ console.log(variableKetiga);
 
 Solusi 4
 ```javascript
-function fungsiEmpat () {
+(function fungsiEmpat () {
   let variableKeempat = 3;
-}
+})();
 
 console.log(variableKeempat);
 ```
@@ -221,7 +221,7 @@ let objStudent2 = {
 };
 
 console.log(objStudent.nama);
-console.log(objStudent2[nama]);
+console.log(objStudent2['nama']);
 ```
 
 ### Array of Objects
