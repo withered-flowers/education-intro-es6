@@ -338,10 +338,11 @@ console.log(argv[2]);
 
 Bagaimana bila kita menginginkan 2 parameter input dari process.argv?  
 Misal:  
-Inginkan mencetak `.` dengan baris `x` dan kolom `y` dipisah dengan `|`
+Mencetak simbol `.` dengan jumlah baris `x` dan kolom `y` dipisah dengan `|`
 
 Contoh input:
 ```javascript
+// node index.js x y
 node index.js 5 15
 ```
 
