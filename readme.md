@@ -241,7 +241,7 @@ Pernah tidak kepikiran bahwa parameter dalam fungsi terkadang **kebanyakan**
 
 Contoh:
 ```javascript
-let tambahStudent = (nama, alamat, identitas) => {
+function tambahStudent(nama, alamat, identitas) {
   let output = 'Nama ' + nama + ' dengan identitas ' + identitas + ' dan alamat ' + alamat + ' sukses ditambahkan';
   console.log(output);
 };
@@ -257,7 +257,7 @@ Salah satu solusinya: jadikan object ~
 Contoh:
 
 ```javascript
-let tambahStudent = (obj) => {
+function tambahStudent(obj) {
   let output = 'Nama ' + obj.nama + ' dengan identitas ' + obj.identitas + ' dan alamat ' + obj.alamat + ' sukses ditambahkan';
   console.log(output);
 };
@@ -295,7 +295,7 @@ function fungsiPenjumlahan(param1, param2) {
   return param1 + param2;
 }
 
-// Alternatif cara menulis fungsi (Old School JS)
+// Alternatif cara menulis fungsi
 var fungsiPenjumlahan = function (param1, param2) {
   return param1 + param2;
 }
@@ -305,7 +305,7 @@ let fungsiPenjumlahan = (param1, param2) => {
   return param1 + param2;
 }
 
-// Bila akan langsung mereturn, tanpa curly bracket { }
+// Bila akan langsung mereturn, arrow function tanpa curly bracket { }
 let fungsiPenjumlahan = (param1, param2) => param1 + param2;
 ```
 
