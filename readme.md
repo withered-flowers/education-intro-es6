@@ -375,8 +375,8 @@ for(let i = 0; i < param1; i++) {
 ```
 
 ## Referensi
-* [Sastra Panca Nababan - Medium](https://medium.com/coderupa/es6-var-let-const-apa-bedanya-1cd4daaee9f0)
+* [Perbedaan var, const, let - Medium](https://medium.com/coderupa/es6-var-let-const-apa-bedanya-1cd4daaee9f0)
 * [Javascript Array Objects - TutorialsPoint](https://www.tutorialspoint.com/javascript/javascript_arrays_object.htm)
 * [process.Argv - NodeJS](https://nodejs.org/docs/latest/api/process.html#process_process_argv)
-* [W3Schools - Use Strict](https://www.w3schools.com/js/js_strict.asp)
-* [MDN - Strict Mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+* [Use Strict - W3Schools](https://www.w3schools.com/js/js_strict.asp)
+* [Strict Mode - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
