@@ -19,7 +19,7 @@
 ### var (Old School Javascript)
 Permasalahan yang ada pada `var`
 1. Reassign itu diperbolehkan di mana saja.
-1. Variabel seolah *diangkat* ke atas kapan pun
+1. Variable seolah *diangkat* ke atas kapan pun (*hoisting*)
 1. Scope bermasalah
 1. Lupa declare variable itu *dimaafkan*
 
