@@ -245,7 +245,7 @@ console.log(arrStudents[0].nama);
 ```
 
 ## Argument Dependency
-Pernah tidak kepikiran bahwa parameter dalam fungsi terkadang **kebanyakan**
+Pernah terpikirkan tidak bahwa parameter dalam fungsi terkadang **kebanyakan**
 
 Contoh:
 ```javascript
@@ -281,7 +281,7 @@ tambahStudent(objStudent);
 
 
 ## Template Literal
-Membuat simpel penulisan yang `sulit`
+Membuat `simpel` penulisan output yang `sulit` dibaca dengan banyaknya lambang `+`
 
 Code:
 ```javascript
