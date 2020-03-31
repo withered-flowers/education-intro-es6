@@ -178,6 +178,13 @@ let kardus = [];
 kardus.push(biskuit);
 kardus.push(biskuit);
 kardus.push(biskuit);
+
+// Bila langsung direpresentasikan tanpa push?
+let kardus2 = [
+  ['b0', 'b1', 'b2', 'b3', 'b4', 'b5'],
+  ['b0', 'b1', 'b2', 'b3', 'b4', 'b5'],
+  ['b0', 'b1', 'b2', 'b3', 'b4', 'b5'
+];
 ```
 
 ### Object
