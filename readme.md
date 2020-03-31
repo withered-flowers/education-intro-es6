@@ -362,16 +362,16 @@ let param2 = argv[3];
 
 let arr = [];
 
-for(let i = 0; i < param1; i++) {
+for(let ctr1 = 0; ctr1 < param1; ctr1++) {
   let output;
   
-  arr[i] = [];
+  arr[ctr1] = [];
 
-  for(let j = 0; j < param2; j++) {
-    arr[i][j] = '.';
+  for(let ctr2 = 0; ctr2 < param2; ctr2++) {
+    arr[ctr1][ctr2] = '.';
   }
 
-  output = '|' + arr[i].join('|') + '|';
+  output = '|' + arr[ctr1].join('|') + '|';
   
   console.log(output);
 }
