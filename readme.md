@@ -100,8 +100,8 @@ console.log(variableKeempat);
 ```
 
 ### use strict
-Sebuah kata kunci yang digunakan untuk membuat hidup koding dalam javascript menjadi lebih `susah`  
-namun menjadi lebih `aman` seperti:
+Sebuah kata kunci yang digunakan untuk membuat hidup koding dalam javascript   
+menjadi lebih `susah` namun menjadi lebih `aman` seperti:
 1. Variable wajib declare (termasuk object)
 1. Beberapa kata kunci tidak boleh digunakan menjadi variable
 1. Tidak boleh ada nama variable yang sama dalam object / function parameter
@@ -151,20 +151,20 @@ for(let ctr = 0; ctr < arrayPenampung.length; ctr++) {
 Array juga bisa di-`array`-kan lagi
 
 Analogi:
-Pesen biskuit dalam kardus
+Bungkusan biskuit di dalam Kardus
 
 1 bungkus biskut ada 5 pcs biskuit  
 ```javascript
-[ b0 | b1 | b2 | b3 | b4 ]
+[ b1 | b2 | b3 | b4 | b5 ]
 ```
 
 1 kardus isi 3 bungkus biskuit  
 
 ```javascript
 ------------------------------
-| [ b0 | b1 | b2 | b3 | b4 ] |  <-- bungkus pertama  
-| [ b0 | b1 | b2 | b3 | b4 ] |  <-- bungkus kedua  
-| [ b0 | b1 | b2 | b3 | b4 ] |  <-- bungkus ketiga  
+| [ b1 | b2 | b3 | b4 | b5 ] |  <-- bungkus pertama  
+| [ b1 | b2 | b3 | b4 | b5 ] |  <-- bungkus kedua  
+| [ b1 | b2 | b3 | b4 | b5 ] |  <-- bungkus ketiga  
 ------------------------------
 ^ dibungkus dalam kardus
 ```
@@ -172,7 +172,7 @@ Pesen biskuit dalam kardus
 Representasi dalam bentuk kode?
 Code:
 ```javascript
-let biskuit = ['b0', 'b1', 'b2', 'b3', 'b4', 'b5'];
+let biskuit = ['b0', 'b1', 'b2', 'b3', 'b4'];
 let kardus = [];
 
 kardus.push(biskuit);
@@ -181,9 +181,9 @@ kardus.push(biskuit);
 
 // Bila langsung direpresentasikan tanpa push?
 let kardus2 = [
-  ['b0', 'b1', 'b2', 'b3', 'b4', 'b5'],
-  ['b0', 'b1', 'b2', 'b3', 'b4', 'b5'],
-  ['b0', 'b1', 'b2', 'b3', 'b4', 'b5'
+  ['b0', 'b1', 'b2', 'b3', 'b4'],
+  ['b0', 'b1', 'b2', 'b3', 'b4'],
+  ['b0', 'b1', 'b2', 'b3', 'b4']
 ];
 ```
 
