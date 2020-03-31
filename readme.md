@@ -29,6 +29,9 @@ Permasalahan 1
 ```javascript
 var variablePertama = 'hello1';
 var variablePertama = 'hello2';
+
+var pi = 3.14;
+pi = 4.13;
 ```
 
 Permasalahan 2
