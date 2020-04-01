@@ -8,6 +8,7 @@
     * [Nested Array](#nested-array)
     * [Object](#object)
     * [Array of Object](#array-of-object)
+    * [Passed by Value and Reference](#passed-by-value-and-reference)
 1. [Argument Dependency](#argument-dependency)
 1. [Template Literal](#template-literal)
 1. [Arrow Function](#arrow-function)
@@ -244,6 +245,54 @@ arrStudents = [
 console.log(arrStudents[0].nama);
 ```
 
+### Passed by Value and Reference
+**Warning**   
+Tipe data primitif dalam javascript (`Boolean`, `null`, `undefined`, `String`, `number`)   
+umumnya bersifat *passed by value*, yaitu value dalam tipe data tersebut akan dikirimkan  
+apa adanya.
+
+Code:
+```javascript
+let paramInt = 5;
+let paramString = 'Tulisan';
+
+let copyParamInt = paramInt;
+let copyParamString = 'Copyan';
+
+paramInt = 10;
+paramString = 'Ubah Tulisan';
+
+console.log(paramInt, paramString, copyParamInt, copyParamString);
+```
+
+Kode di atas bila direpresentasikan dalam memori:
+| Parameter | Value |
+| :-------- | ----: |
+| paramInt  | 10     |
+| paramString | 'Ubah Tulisan' |
+| copyParamInt | 5 |
+| copyParamString | 'Copyan' |
+
+Berbeda dengan tipe data Object, yang meliputi `Array`, `Function`, dan `Object` itu  
+sendiri bersifat *passed by reference*, yaitu value dalam tipe data tersebut akan dikirimkan  
+berupa alamat.
+
+Code:
+```javascript
+let paramArray = [];
+let copyParamArray = paramArray;
+
+paramArray.push(1);
+
+console.log(paramArray, copyParamArray);
+```
+
+Kode di atas bila direpresentasikan dalam memori:
+| Parameter | Value | &nbsp; | Alamat | Object |
+| :-------- | ----: | ------ | :----- | -----: | 
+| paramArray | <#001> |  | <#001> | [ 1 ] |
+| copyParamArray | <#001> |  |  |  |
+
 ## Argument Dependency
 Pernah terpikirkan tidak bahwa parameter dalam fungsi terkadang **kebanyakan**
 
@@ -278,7 +327,6 @@ let objStudent = {
 
 tambahStudent(objStudent);
 ```
-
 
 ## Template Literal
 Membuat `simpel` penulisan output yang `sulit` dibaca dengan banyaknya lambang `+`
@@ -336,7 +384,15 @@ console.log(argv);
 console.log(argv[2]);
 ```
 
+**Warning**  
+Hasil tangkapan value dari argv semuanya dalam bentuk `String` sekalipun input yang kita  
+masukkan berupa `Number`, sehingga apabila kita menginginkan `Number`, jangan lupa untuk  
+dikonversi terlebih dahulu input yang diterima dengan built-in function yang disediakan  
+oleh Javascript.
+
+Sekarang,  
 Bagaimana bila kita menginginkan 2 parameter input dari process.argv?  
+
 Misal:  
 Mencetak simbol `.` dengan jumlah baris `x` dan kolom `y` dipisah dengan `|`
 
@@ -384,3 +440,4 @@ for(let ctr1 = 0; ctr1 < param1; ctr1++) {
 * [process.Argv - NodeJS](https://nodejs.org/docs/latest/api/process.html#process_process_argv)
 * [Use Strict - W3Schools](https://www.w3schools.com/js/js_strict.asp)
 * [Strict Mode - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+* [Value vs Reference - Codeburst](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
