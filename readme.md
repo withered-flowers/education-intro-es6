@@ -149,7 +149,7 @@ function tadi dan melakukan `export` dan `import` terhadap kode tersebut
 // Export File
 
 // Cara menulis fungsi yang umum digunakan
-function fungsiPenjumlahan(param1, param2) {
+function fungsiPenjumlahan1(param1, param2) {
   return param1 + param2;
 }
 
@@ -169,7 +169,7 @@ let fungsiPenjumlahan4 = (param1, param2) => param1 + param2;
 // kita akan melakukan export supaya bisa digunakan pada file lain
 // supaya bisa menampung banyak, kita akan menggunakan object
 module.exports = {
-  fungsiPenjumlahan,
+  fungsiPenjumlahan1,
   fungsiPenjumlahan2,
   fungsiPenjumlahan3,
   fungsiPenjumlahan4
@@ -179,13 +179,13 @@ module.exports = {
 Sedangkan untuk importnya adalah kita menggunakan
 ```javascript
 // Imported data (function)
-const fungsiPenjumlahan = require('./path/to/file/exported/js.js').fungsiPenjumlahan;
+const fungsiPenjumlahan1 = require('./path/to/file/exported/js.js').fungsiPenjumlahan;
 const fungsiPenjumlahan2 = require('./path/to/file/exported/js.js').fungsiPenjumlahan2;
 const fungsiPenjumlahan3 = require('./path/to/file/exported/js.js').fungsiPenjumlahan3;
 const fungsiPenjumlahan4 = require('./path/to/file/exported/js.js').fungsiPenjumlahan4;
 
 // driver code
-fungsiPenjumlahan(10, 20);
+fungsiPenjumlahan1(10, 20);
 fungsiPenjumlahan2(20, 30);
 ```
 
@@ -221,14 +221,14 @@ maka akan berubah menjadi
 
 ```javascript
 const { 
-  fungsiPenjumlahan,
+  fungsiPenjumlahan1,
   fungsiPenjumlahan2,
   fungsiPenjumlahan3,
   fungsiPenjumlahan4
 } = require('./source-06a-module-exports.js')
 
 // driver code start here
-fungsiPenjumlahan(10, 20);
+fungsiPenjumlahan1(10, 20);
 fungsiPenjumlahan2(20, 30);
 ```
 
